@@ -25,11 +25,10 @@ export const editCampaign = async (data) => {
     rest.completedAt = new Date();
   }
 
-  // Always update updatedAt
-  const payload = { ...rest, updatedAt: new Date() };
-  const updateDoc = { $set: payload };
-
+  
+  
   // Perform update
+  const updateDoc = { $set: rest };
   await campaignCollections.updateOne(query, updateDoc);
 
   // Return context-sensitive message
