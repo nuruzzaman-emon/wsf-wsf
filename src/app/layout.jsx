@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
     <NextAuthProvider>
       <html lang="en">
         <body className={`${poppins.className} antialiased`}>
-          <header className="w-11/12 mx-auto ">
+          <header className="w-11/12 mx-auto sticky top-0 z-50">
             <Navbar />
           </header>
           <main className="w-11/12 mx-auto">{children}</main>

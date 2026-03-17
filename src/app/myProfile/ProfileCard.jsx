@@ -4,39 +4,59 @@ import Image from "next/image";
 import Link from "next/link";
 
 const ProfileCard = ({ session }) => {
-    console.log(session?.user?.image)
+  console.log(session)
+  
+
   return (
-    <div className="bg-white shadow-xl rounded-2xl p-8 flex flex-col md:flex-row gap-8 items-center max-w-3xl mx-auto">
-      {/* Profile Image */}
-      <div className="relative w-40 h-40 md:w-48 md:h-48 flex-shrink-0">
-        <Image
-          src={session?.user?.image || "/user.png"}
-          alt={session?.user?.name || "User"}
-          fill
-          className="rounded-full object-cover border-4 border-primary shadow-lg"
-        />
+    <div className="bg-base-100 shadow-xl rounded-2xl overflow-hidden max-w-3xl mx-auto">
+      {/* Cover */}
+      <div className="h-36 bg-gradient-to-r from-primary to-secondary"></div>
+
+      {/* Avatar */}
+      <div className="flex justify-center -mt-16">
+        <div className="relative w-32 h-32">
+          <Image
+            src={session?.image || "/user.png"}
+            alt={session?.name || "session"}
+            fill
+            className="rounded-full object-cover border-4 border-white shadow-lg"
+          />
+        </div>
       </div>
 
-      {/* Profile Info */}
-      <div className="flex-1 text-center md:text-left space-y-4">
-        <h2 className="text-3xl font-bold text-gray-900">
-          {session?.user?.name}
-        </h2>
+      {/* session Info */}
+      <div className="text-center p-6 space-y-3">
+        <h2 className="text-2xl font-bold">{session?.name}</h2>
 
-        <p className="text-gray-500 text-lg">{session?.email}</p>
+        <p className="text-gray-500">{session?.email}</p>
 
-        <span className="inline-block bg-primary/20 text-primary font-semibold px-4 py-1 rounded-full uppercase text-sm">
+        <span className="badge badge-primary badge-lg capitalize">
           {session?.role}
         </span>
+      </div>
 
-        <div className="pt-4">
-          <Link
-            href="/myProfile/edit"
-            className="btn btn-primary px-6 py-2 text-base hover:scale-105 transition-transform"
-          >
-            Update Profile
-          </Link>
+      {/* Info Grid */}
+      <div className="grid grid-cols-2 gap-4 px-6 pb-6">
+        <div className="bg-base-200 rounded-lg p-4 text-center">
+          <p className="text-sm text-gray-500">Account Status</p>
+          <p className="font-semibold text-green-600">Active</p>
         </div>
+
+        <div className="bg-base-200 rounded-lg p-4 text-center">
+          <p className="text-sm text-gray-500">Role</p>
+          <p className="font-semibold capitalize">{session?.role}</p>
+        </div>
+      </div>
+
+      {/* Actions */}
+      <div className="flex justify-center gap-4 pb-8">
+        <Link href="/myProfile/edit" className="btn btn-primary">
+          Update Profile
+        </Link>
+
+        <Link href="/" className="btn btn-outline">
+          Back Home
+        </Link>
       </div>
     </div>
   );

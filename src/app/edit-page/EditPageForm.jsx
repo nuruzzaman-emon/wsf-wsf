@@ -28,7 +28,7 @@ const EditPageForm = ({ campaign }) => {
       });
       const data = await res.json();
       const payload = {
-        _id: campaign?._id,
+        id: campaign?._id,
         title,
         description,
         category,

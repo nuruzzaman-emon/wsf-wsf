@@ -60,7 +60,7 @@ const CampaignCard2 = ({ campaign }) => {
   };
 
   return (
-    <div className="card bg-base-100 shadow-xl rounded-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+    <div className="card bg-base-50 shadow-xl rounded-lg overflow-hidden hover:shadow-2xl hover:bg-white transition-shadow duration-300">
       {/* Image / Icon */}
 
       <Image

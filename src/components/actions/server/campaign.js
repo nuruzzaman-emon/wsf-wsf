@@ -17,8 +17,8 @@ export const deleteCampaign = async (id) => {
 };
 
 export const editCampaign = async (data) => {
-  const { _id, ...rest } = data;
-  const query = { _id: new ObjectId(_id) };
+  const { id, ...rest } = data;
+  const query = { _id: new ObjectId(id) };
 
   // If updating status to completed, also add completedAt timestamp
   if (rest.status === "completed") {

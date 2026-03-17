@@ -45,6 +45,11 @@ export const updateUser = async (payload) => {
     $set: { ...updateData, updatedAt: new Date() },
   };
   const result = await usersCollection.updateOne(query, updateDoc);
-  return {success:true,message:"User Updated Successfully"}
-  console.log(query);
+  return { success: true, message: " Updated Successfully" };
+};
+
+export const deleteUser = async (id) => {
+  const query = { _id: new ObjectId(id) };
+  const result = await usersCollection.deleteOne(query);
+  return { success: true, message: "Deleted Successfully" };
 };

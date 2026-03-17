@@ -3,6 +3,7 @@ import GoogleBtn from "@/components/GoogleBtn";
 import { signIn } from "next-auth/react";
 import Link from "next/link";
 import React, { useState } from "react";
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
 
 const LoginForm = () => {
   const [loading, setLoading] = useState(false);
@@ -26,7 +27,6 @@ const LoginForm = () => {
     }
     setLoading(false);
   };
-  
 
   return (
     <div>
@@ -38,6 +38,7 @@ const LoginForm = () => {
             name="email"
             className="w-full input my-2 focus:outline-primary"
             placeholder="Email"
+            disabled={loading}
             required
           />
           <label className="font-bold">Password</label>
@@ -46,6 +47,7 @@ const LoginForm = () => {
             name="password"
             className="w-full input my-2 focus:outline-primary"
             placeholder="Password"
+            disabled={loading}
             required
           />
 
@@ -55,7 +57,14 @@ const LoginForm = () => {
             className="btn btn-xs md:btn-md btn-primary mt-4"
             disabled={loading}
           >
-            {loading ? "Logging in..." : "Login Now"}
+            {loading ? (
+              <span className="flex items-center gap-2">
+                <AiOutlineLoading3Quarters className="animate-spin" /> Logging
+                in...
+              </span>
+            ) : (
+              "Login Now"
+            )}
           </button>
         </fieldset>
       </form>

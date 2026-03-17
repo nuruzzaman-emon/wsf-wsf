@@ -3,11 +3,13 @@ import Image from "next/image";
 import React from "react";
 import {
   FaPlusSquare,
+  FaRegUser,
   FaSignInAlt,
   FaSignOutAlt,
   FaUserPlus,
 } from "react-icons/fa";
 import { SiNginxproxymanager } from "react-icons/si";
+import { FaUsersGear } from "react-icons/fa6";
 import Navlink from "./Navlink";
 import Link from "next/link";
 import { signOut, useSession } from "next-auth/react";
@@ -105,21 +107,22 @@ const Navbar = () => {
                   href={"/myProfile"}
                   className="btn btn-xs md:btn-md btn-primary"
                 >
-                  <FaPlusSquare />
+                  <FaRegUser />
                   My Profile
                 </Link>
               </li>
-              {role === "user" && (
-                <li>
-                  <Link
-                    href={"/addCampaign"}
-                    className="btn btn-xs md:btn-md btn-primary"
-                  >
-                    <FaPlusSquare />
-                    Add Campaigns
-                  </Link>
-                </li>
-              )}
+              {role === "user" ||
+                (role === "organizer" && (
+                  <li>
+                    <Link
+                      href={"/addCampaign"}
+                      className="btn btn-xs md:btn-md btn-primary"
+                    >
+                      <FaPlusSquare />
+                      Add Campaigns
+                    </Link>
+                  </li>
+                ))}
               {(role === "organizer" || role === "admin") && (
                 <li>
                   <Link
@@ -137,7 +140,7 @@ const Navbar = () => {
                     href={"/manage-member"}
                     className="btn btn-xs md:btn-md btn-primary"
                   >
-                    <SiNginxproxymanager />
+                    <FaUsersGear />
                     Manage Members
                   </Link>
                 </li>

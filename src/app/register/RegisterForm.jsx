@@ -5,6 +5,7 @@ import { signIn } from "next-auth/react";
 import GoogleBtn from "@/components/GoogleBtn";
 import { postUser } from "@/components/actions/server/auth";
 import Link from "next/link";
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
 
 const RegisterForm = () => {
   const [loading, setLoading] = useState(false);
@@ -71,6 +72,7 @@ const RegisterForm = () => {
             name="name"
             className="w-full input my-2 focus:outline-primary"
             placeholder="Your Name"
+            disabled={loading}
             required
           />
           <label className="font-bold">Email</label>
@@ -79,6 +81,7 @@ const RegisterForm = () => {
             name="email"
             className="w-full input my-2 focus:outline-primary"
             placeholder="Your Email"
+            disabled={loading}
             required
           />
           <label className="font-bold">Password</label>
@@ -87,6 +90,7 @@ const RegisterForm = () => {
             name="password"
             className="w-full input my-2 focus:outline-primary"
             placeholder="Set a Password"
+            disabled={loading}
             required
           />
           <label className="font-bold">Photo</label>
@@ -95,6 +99,7 @@ const RegisterForm = () => {
             name="photo"
             className="w-full input my-2 focus:outline-primary"
             placeholder="Your Photo"
+            disabled={loading}
             required
           />
 
@@ -102,7 +107,14 @@ const RegisterForm = () => {
             className="btn btn-xs md:btn-md btn-primary mt-4"
             disabled={loading}
           >
-            {loading ? "Registering..." : "Register Now"}
+            {loading ? (
+              <span className="flex items-center gap-2">
+                <AiOutlineLoading3Quarters className="animate-spin " />{" "}
+                Registering
+              </span>
+            ) : (
+              "Register Now"
+            )}
           </button>
         </fieldset>
       </form>
