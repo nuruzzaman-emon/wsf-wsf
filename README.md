@@ -73,7 +73,7 @@ List required dependencies or major libraries:
 1. Clone the repo and install dependencies:
 
 ```bash
-git clone https://github.com/touhidcodes/Resume-Craft
+git clone https://github.com/nuruzzaman-emon/wsf-wsf.git
 cd resume-craft
 npm install
 ```
