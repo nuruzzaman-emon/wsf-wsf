@@ -1,11 +1,10 @@
-# Hi 👋, I'm <YOUR NAME>  
+# Hi 👋, I'm Md. Emon Ali  
 ### 🔭 I build things with JavaScript, React, and Node.js
 
 ---
 
-## 👨‍💻 About Me  
-I'm a passionate full-stack developer who enjoys building modern, high-performance web applications. I love working with **JavaScript**, **React**, and **Node.js**, and I'm always exploring new tools to improve my workflow.  
-Currently, I'm focused on expanding my knowledge in **GraphQL** and **Docker** while working on exciting real-world projects. Feel free to reach out if you want to talk about **web development**, open-source, or cool tech ideas!
+## 👨‍💻 About  
+**WSF** is a web-based donation platform designed to support poor and neglected communities through organized fundraising campaigns. The application allows users to create campaigns with specific goals and time limits, encouraging donors to contribute within a defined period. It provides a simple and user-friendly interface where individuals can explore ongoing campaigns, learn about different causes, and make secure donations. WSF aims to build a bridge between generous donors and people in need, ensuring transparency and trust throughout the process. By enabling time-bound campaigns, the platform creates urgency and increases engagement, helping to maximize contributions and make a meaningful social impact in a more efficient and accessible way.
 
 ---
 
