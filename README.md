@@ -1,5 +1,6 @@
-# Project Name  
-A short one-line subtitle that describes what this project does.
+# WSF 
+**WSF** is a donation platform where users create time-limited campaigns to support poor and neglected people through easy contributions.
+
 
 ---
 
@@ -20,7 +21,8 @@ A short one-line subtitle that describes what this project does.
 ---
 
 ## About the Project 
-A brief description of the project, its purpose, and what problem it solves.
+**WSF** is a web-based donation platform designed to support poor and neglected communities through organized fundraising campaigns. The application allows users to create campaigns with specific goals and time limits, encouraging donors to contribute within a defined period. It provides a simple and user-friendly interface where individuals can explore ongoing campaigns, learn about different causes, and make secure donations. WSF aims to build a bridge between generous donors and people in need, ensuring transparency and trust throughout the process. By enabling time-bound campaigns, the platform creates urgency and increases engagement, helping to maximize contributions and make a meaningful social impact in a more efficient and accessible way.
+
 
 ---
 
