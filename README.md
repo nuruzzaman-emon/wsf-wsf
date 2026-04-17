@@ -74,7 +74,7 @@ List required dependencies or major libraries:
 
 ```bash
 git clone https://github.com/nuruzzaman-emon/wsf-wsf.git
-cd resume-craft
+cd wsf-wsf
 npm install
 ```
 
@@ -114,7 +114,7 @@ project/
 
 
 ## Contact
-
+**Live Link** 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/yourprofile)
 [![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github)](https://github.com/nuruzzaman-emon)
 [![Facebook](https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white)](https://www.facebook.com/nemon.khan.39)
